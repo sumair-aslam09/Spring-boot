@@ -5,7 +5,7 @@ echo -n "..."
 sleep 120
 
 status=(curl -s -o /dev/null -w "%{http_code}"  "http://localhost:8081")
-if [ $status -eq 200 ];
+if [ $status == 200 ];
 then
   echo "Application is up and running"
 else
