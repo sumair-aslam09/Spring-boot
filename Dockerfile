@@ -6,6 +6,6 @@ WORKDIR /app
 
 COPY target/*.jar .
 
-EXPOSE 8081
+EXPOSE 8082
 
 ENTRYPOINT ["java", "-jar", "spring-petclinic-3.1.0-SNAPSHOT.jar"]
