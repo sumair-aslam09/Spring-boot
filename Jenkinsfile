@@ -47,7 +47,7 @@ pipeline {
         // Stage 5: Run Container
         stage('Run Container'){
             steps {
-                sh 'docker run -d -p 8082:8080 spring-boot' // Run a Docker container based on the built image
+                sh 'docker run -d -p 8084:8080 spring-boot' // Run a Docker container based on the built image
             }
         }
 
