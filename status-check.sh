@@ -6,7 +6,7 @@ echo "Testing the status of the Application"
 echo -n "..."
 sleep 120
 
-status=$(curl -s -o /dev/null -w "%{http_code}" "http://localhost:8081")
+status=$(curl -s -o /dev/null -w "%{http_code}" "http://192.168.32.98:8082/")
 # Check if the status code is 200 (indicating a successful response)
 if [ "$status" == "200" ]; then
   echo "Application is up and running"
