@@ -39,7 +39,7 @@ pipeline {
             steps {
                 dir('Spring-boot'){
                     sh 'pwd' // Print the current directory path
-                    sh 'docker build -t spring .' // Build a Docker image from the project directory
+                    sh 'docker build -t spring-boot .' // Build a Docker image from the project directory
                 }
             }
         }
@@ -47,7 +47,7 @@ pipeline {
         // Stage 5: Run Container
         stage('Run Container'){
             steps {
-                sh 'docker run -d -p 8081:8080 spring' // Run a Docker container based on the built image
+                sh 'docker run -d -p 8082:8080 spring-boot' // Run a Docker container based on the built image
             }
         }
 
